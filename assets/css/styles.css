@@ -187,11 +187,16 @@ img {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+  color: #fff;
 }
 
 #unten span {
   padding: 10px;
   border: 1px solid #fff;
+}
+
+#unten p {
+  margin-bottom: 10px;
 }
 
 h3 {

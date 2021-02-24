@@ -139,6 +139,7 @@ let roomsArray = [
     name: "Patio",
   }
 ]
+
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
@@ -147,7 +148,6 @@ let selectRandom = () => {
   let person = suspectsArray[getRandomInt(6)]
   let waffe = weaponsArray[getRandomInt(9)]
   let room = roomsArray[getRandomInt(15)]
-  console.log(person, waffe, room);
   container.innerHTML = `<div class="card">
   <div class="card__image-container">
     <img class="card__image" src="${person.image}" alt="">
@@ -166,7 +166,14 @@ let selectRandom = () => {
     <h3>${person.occupation}</h3>
     <p>${person.description}</p>
     <div id="unten">
-      <span>${waffe.name}</span><span>${room.name}</span>
+    <div>
+      <p>Weapon</p>
+      <span>${waffe.name}</span>
+    </div>
+    <div>
+      <p>Room</p>
+      <span>${room.name}</span>
+    </div>
     </div>
   </div>
 </div>`
